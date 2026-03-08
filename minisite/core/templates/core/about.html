@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block title %}{{ page_title }} - My Django Site{% endblock %}
+
+{% block content %}
+    <h2>About Me: </h2>
+    <p><strong>Name:</strong> Aya-El-Mizari</p>
+    <p><strong>Bio:</strong> I'm a graduate student at AOU majoing IT-Networking & Security. I'm Looking forwards for training courses that develops my skills and help me in my graduation project.<br>
+    So far, enrolling in this training course actually helped me create this site you're browsing in.<br> Isn't that AWESOME!
+    </p>
+
+    <h3>My Skills:</h3>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>I'm currently learning web development with Django as part of a 9-week training program.<br>
+        Seeking to gain more skills!
+
+    </p>
+{% endblock %}

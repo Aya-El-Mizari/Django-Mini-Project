@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Django Mini Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block header_title %}Mini-Site Django Portfolio{% endblock %}</h1>
+    </header>
+
+    <nav>
+        <a href="{% url 'core:home' %}">Home</a>
+        <a href="{% url 'core:about' %}">About</a>
+        <a href="{% url 'core:contact' %}">Contact</a>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy;  2026 Django Training Mini-Project. Week 4 Assignment.</p>
+    </footer>
+</body>
+</html>
